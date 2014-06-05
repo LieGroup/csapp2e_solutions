@@ -1,0 +1,20 @@
+# ignore text editors' swap files
+*.swp
+*~
+
+# libraries
+*.lib
+*.a
+
+#shared objects
+*.dll
+*.so
+*.so.*
+*.dylib
+
+#executables
+*.exe
+*.out
+*.app
+*.i*86
+*.hex

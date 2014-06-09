@@ -11,11 +11,11 @@ float_bits float_twice(float_bits f)
     /* denormalized */
     if(exp == 0)
     {
-        /* frac=1XXXXX... */ 
+        /* frac=1XXXXX... */
         if(frac >> 22)
 	{
 	    exp += 1;
-	    frac = frac << 1 & 0x7FFFFFF; 
+	    frac = frac << 1 & 0x7FFFFFF;
 	}
 	else
 	    frac <<= 1;

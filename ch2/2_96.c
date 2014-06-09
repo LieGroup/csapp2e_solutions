@@ -14,7 +14,7 @@ float_bits float_i2f(int i)
     if(i != INT_MIN)
     {
 
-        /* negative number -> positive counterpart */    
+        /* negative number -> positive counterpart */
         if(sign)
 	    i = ~i + 1;
 	unsigned ui = (unsigned) i;
@@ -44,14 +44,14 @@ float_bits float_i2f(int i)
 	        unsigned round = rb!=0 && ((rb_mask<<1 & ui) !=0 || 
 		    (rb_mask>>1 & ui) != 0);
 
-                frac = ui >> (exp-1-23) & 0x7FFFFF 
+                frac = ui >> (exp-1-23) & 0x7FFFFF;
 		if(frac == 0x7FFFFF && round)
 		{
 		    exp += 1;
 		    frac = 0x800000;
 		}
 		else
-		    frac = + round; 
+		    frac = + round;
 
 
 	    }

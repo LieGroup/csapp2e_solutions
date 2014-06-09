@@ -2,7 +2,7 @@
  * constructing the bit representation of 2^x according to IEEE single-precision
  * representation and using function u2f() to convert it to a float number. When
  * x is too small, your routine will return 0.0. When x is too large, it will
- * return +inf. 
+ * return +inf.
  */
 
 int float fpwr2(int x)
@@ -26,7 +26,7 @@ int float fpwr2(int x)
     else if(x < 128)
     {
         /* normalized*/
-	exp = x + 127 
+	exp = x + 127;
 	frac = 0;
     }
     else
